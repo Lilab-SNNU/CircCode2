@@ -86,7 +86,7 @@ def filter_coding_circ_and_reads_index(raw_circrnas, raw_reads, tmp_file_path, r
     print(get_time(), 'filter coding ablity by ribo-seq data...')
     coding_circ_reads_site = {}
     han_bed = open(bedfile)
-    #han_not = open('align.txt','w+')    
+    han_not = open(tmp_file_path + '/align.txt','w+')    
 
     # save the circ which reads cross the junction, save the reads site
     for line in han_bed:
