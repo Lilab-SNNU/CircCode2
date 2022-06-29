@@ -1,0 +1,50 @@
+# CircOrf-config-file
+# This configuration file includes all adjustable options and files for CircOrf.
+# Please input full absolute path.
+# You can submit your question by submitting issue on github or sending an e-mail
+# E-mail = mr1997@snnu.edu.cn
+# Date = 30 July 2021
+
+#################
+# required data #
+#################
+
+# The path of genome file
+transcript_fasta: ./test_data/test_transcript_human_GRCh38.fa
+
+# The path of ribo-seq raw reads file(single)
+raw_reads: 
+           - ./test_data/test.fastq
+
+# The path of ribosome sequence file
+ribosome_fasta: ./test_data/test_rRNA_human.fa
+
+# The path of Candidate circRNA
+circrnas: ./test_data/test_circRNA.fa
+
+# The path of gtf file of circRNA, the file should be generated in our way(README.md) 
+circrna_gtf: ./test_data/test_circRNA.txt
+
+#####################
+# Required location #
+#####################
+
+# The path of folder for storing the final result
+result_file_location: ./result
+
+# The path of folder for storing temporary results
+tmp_file_location: ./tmp
+
+#################
+# OTHER OPTIONS #
+#################
+
+# The thread to run bowtie or STAR
+thread: 12
+
+# type of Ribo-seq data, value: sra or fastq
+ribotype: fastq
+
+
+
+
