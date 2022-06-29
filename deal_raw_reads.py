@@ -68,6 +68,7 @@ def predict_adapter(raw_reads, ribotype, tmp_file_path):
             break
 
     if len(adapter_full_dic) == 0:
+        xxx = 0
         #print(get_time(), 'no adapter in these reads')
     elif len(adapter_full_dic) != 0:
         # find the longest full adapter
