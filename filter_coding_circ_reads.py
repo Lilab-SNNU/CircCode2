@@ -17,7 +17,7 @@ def make_junction_seq(raw_circrnas, circrna_gtf, raw_reads, tmp_file_path, final
     # get the biggest length of reads, assemble the junction file 
     global junc_site
     junc_site = max_reads_lenth
-    print(junc_site)
+    #print(junc_site)
 
     read_name = str(raw_reads).split('/')[-1].split('.')[0]
     circ_name = read_name + '_' + str(raw_circrnas).split('/')[-1].split('.')[0]
