@@ -135,7 +135,7 @@ TC-hsa-UBE2J2_0010      -      607      ENSG00000160087.20      NaN
   
 ## Citation
 
-CircCode2: A useful workflow for Identification and Visualization of circRNAs with coding potential
+CircCode2: A useful workflow for Identification and Visualization of circRNAs with coding ability
 
 ## Contact us
 
