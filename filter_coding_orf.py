@@ -120,7 +120,7 @@ def stop_codon_score(tmp_file_name, tmp_file_path):
      global end_score_file
      end_score_file = tmp_file_path +'/'+ tmp_file_name + '_end_stop_codon_score.result'
      model_file = './requiredSoft/stop_codon_model/'
-     os.system('python predict.py -predict_fa {} -model_path {} -outfile {}'.format(end_raw_file, model_file, end_score_file))
+     os.system('python3 predict.py -predict_fa {} -model_path {} -outfile {}'.format(end_raw_file, model_file, end_score_file))
 
      # filter the stop codon score which bigger than 0.5
      han_end = open(end_score_file)
@@ -174,7 +174,7 @@ def IRES_score(tmp_file_name, tmp_file_path):
      global IRES_score_file
      IRES_score_file = tmp_file_path +'/'+ tmp_file_name + '_up_IRES_score.result'
      
-     os.system('python requiredSoft/IRESfinder_final/IRESfinder.py -f {} -o {}'.format(upstream_raw_file, IRES_score_file))
+     os.system('python3 requiredSoft/IRESfinder_final/IRESfinder.py -f {} -o {}'.format(upstream_raw_file, IRES_score_file))
 
 # give a m6a score for the upstream sequence of each ORF
 def M6A_score(tmp_file_name, tmp_file_path, pos_fa, neg_fa):
@@ -185,13 +185,13 @@ def M6A_score(tmp_file_name, tmp_file_path, pos_fa, neg_fa):
      
      if pos_fa == 'default_path' or neg_fa == 'default_path':
           model_path = './requiredSoft/DeepM6ASeq/trained_models/hs/cnn/256-128_10-5_0_0.5_Y_Y_0.0_0.01_256/'
-          os.system('python requiredSoft/DeepM6ASeq/main_test.py -m cnn -infa {} -md {} -outfn {}'.format(upstream_raw_file, model_path, M6A_score_file))
+          os.system('python3 requiredSoft/DeepM6ASeq/main_test.py -m cnn -infa {} -md {} -outfn {}'.format(upstream_raw_file, model_path, M6A_score_file))
 
      else:
           out_dir = tmp_file_path +'/trained_models/'
           model_path = out_dir + 'cnn/256-128_10-5_0_0.5_Y_Y_0.0_0.01_256/'
-          os.system('python requiredSoft/DeepM6ASeq/main_train.py -m cnn -pos_fa {} -neg_fa {} -od {}'.format(pos_fa, neg_fa, out_dir))
-          os.system('python requiredSoft/DeepM6ASeq/main_test.py -m cnn -infa {} -md {} -outfn {}'.format(upstream_raw_file, model_path, M6A_score_file))
+          os.system('python3 requiredSoft/DeepM6ASeq/main_train.py -m cnn -pos_fa {} -neg_fa {} -od {}'.format(pos_fa, neg_fa, out_dir))
+          os.system('python3 requiredSoft/DeepM6ASeq/main_test.py -m cnn -infa {} -md {} -outfn {}'.format(upstream_raw_file, model_path, M6A_score_file))
     
 # filtrate from all the potential ORF fasta by comparing with the IRESscore file
 def filter_ires_M6A(lenth_need, ires_score, m6a_score, tmp_file_name, tmp_file_path, final_name, final_file_path, pos_fa, neg_fa):
@@ -342,12 +342,12 @@ def filter_ires_M6A(lenth_need, ires_score, m6a_score, tmp_file_name, tmp_file_p
      
      if pos_fa == 'default_path' or neg_fa == 'default_path':
           model_path = './requiredSoft/DeepM6ASeq/trained_models/hs/cnn/256-128_10-5_0_0.5_Y_Y_0.0_0.01_256/'
-          os.system('python requiredSoft/DeepM6ASeq/saliency_map.py -m cnn -infa {} -md {} -outfn {}'.format(ires_final_file, model_path, M6A_score_map))
+          os.system('python3 requiredSoft/DeepM6ASeq/saliency_map.py -m cnn -infa {} -md {} -outfn {}'.format(ires_final_file, model_path, M6A_score_map))
 
      else:
           out_dir = tmp_file_path +'/trained_models/'
           model_path = out_dir + 'cnn/256-128_10-5_0_0.5_Y_Y_0.0_0.01_256/'
-          os.system('python requiredSoft/DeepM6ASeq/saliency_map.py -m cnn -infa {} -md {} -outfn {}'.format(ires_final_file, model_path, M6A_score_map))
+          os.system('python3 requiredSoft/DeepM6ASeq/saliency_map.py -m cnn -infa {} -md {} -outfn {}'.format(ires_final_file, model_path, M6A_score_map))
 
 # Make a virtual sequence and reverse_complement the '-' strand
 def reverse_complment(circrna_gtf, final_name, final_file_path):
