@@ -93,7 +93,7 @@ Attention: Before you begin to use this package, you need to make sure that you 
   python3 filter_coding_orf.py -y config.yaml
   ```
   
-  - Visualize the IRES region secondary structure, the circ annotated graph, the word annoated graph, the express_analysis of the circ and the distribution of the predicted ORFs
+  - Visualize the IRES region secondary structure, the circ annotated graph, the word annotated graph, the express_analysis of the circ and the distribution of the predicted ORFs
   
   ```
   python3 visual_circ_orf.py -y config.yaml
@@ -112,7 +112,7 @@ When opening the config file in text format, there are some lines that need to b
    
  - circrnas: Fill in the absolute path of the candidate circRNA(not the relative path!).You need to ensure that the id format of your circRNA is the same as the circrna_gtf file.
    
- - circrna_gtf: Fill in the absolute path of the candidate circRNA annoated file(not the relative path!). This gtf file should be like this type(make by yourself), samples are optional, you can input NaN if you don't need.
+ - circrna_gtf: Fill in the absolute path of the candidate circRNA annotated file(not the relative path!). This gtf file should be like this type(make by yourself), samples are optional, you can input NaN if you don't need.
 
 ```
 
