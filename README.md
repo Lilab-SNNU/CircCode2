@@ -9,7 +9,7 @@ CircCode2 is a Python3-base pipeline for the prediction and visualization of cir
 - Candidate circRNA sequences (fasta format)
 - rRNA sequences (fasta format)
 - Ribosome profiling data (sra format) 
-- circRNA annotation file (txt format): This gtf file should be like this type(make by yourself), samples and gene_id are optional, you can input NaN if you don't need.
+- circRNA annotation file (txt format): This gtf file should be like this type(make by yourself), samples and gene_id are optional, you can input NaN if you don't need it.
 
 ```
 
@@ -23,7 +23,7 @@ TC-hsa-UBE2J2_0010      -      607      ENSG00000160087.20      NaN
 
 - riboseq_adapters fasta file
 
-## Software:
+## Softwares:
 
 - cutadapt (v 1.18)
 - bowtie (v.1.2.3)
@@ -31,7 +31,7 @@ TC-hsa-UBE2J2_0010      -      607      ENSG00000160087.20      NaN
 - bedtools (v.2.27.1)
 - ViennaRNA (v 2.4.18)
 
-## python3 package:
+## python3 packages:
 
 - Biopython (v 1.78)
 - Pandas (v 1.3.5)
@@ -48,14 +48,14 @@ TC-hsa-UBE2J2_0010      -      607      ENSG00000160087.20      NaN
 - tqdm (v 4.51.0)
 - matplotlib (v 3.3.3)
 
-## R package:
+## R packages:
 
 - UpSetR
 - edgeR
 - ggplot2
 
 # Quick Start
-Usually you can download the package from github simply,and then:
+Usually, you can download the package from github simply, and then:
 ```
 git clone https://github.com/Lilab-SNNU/CircCode2.git
 cd CircCode2
@@ -66,10 +66,10 @@ tar -zxvf test_data.tar.gz
 
 # Usage
 
-Attention: Before you begin to use this package, you need to make sure that you have install the required software and add them to the environment variables. Besides, we provided the test data, you can verify your environment by test it.
+Attention: Before you begin to use this package, you need to make sure that you have install the required softwares and add them to the environment variables. Besides, we provided the test data, you can verify your environment by test it.
 
 
-1. Fill the config file (config.yaml), input absolute path of each required file.
+1. Fill the config file (config.yaml), and input the absolute path of each required file.
 
 
 2. Run CircCode2 step by step:
@@ -93,7 +93,7 @@ Attention: Before you begin to use this package, you need to make sure that you 
   python3 filter_coding_orf.py -y config.yaml
   ```
   
-  - Visualize the IRES region secondary structure, the circ annoated graph, the word annoated graph, the express_analysis of the circ and the distribution of the predicted ORFs
+  - Visualize the IRES region secondary structure, the circ annotated graph, the word annoated graph, the express_analysis of the circ and the distribution of the predicted ORFs
   
   ```
   python3 visual_circ_orf.py -y config.yaml
