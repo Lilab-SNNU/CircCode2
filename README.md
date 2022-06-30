@@ -5,9 +5,9 @@ CircCode2 is a Python3-base pipeline for the prediction and visualization of cir
 # Requirement
 ## Data:
 
-- Transcript genome sequence(fasta format)
-- Candidate circRNA sequence (fasta format)
-- rRNA sequence (fasta format)
+- Transcript sequences (fasta format)
+- Candidate circRNA sequences (fasta format)
+- rRNA sequences (fasta format)
 - Ribosome profiling data (sra format) 
 - circRNA annotation file (txt format): This gtf file should be like this type(make by yourself), samples and gene_id are optional, you can input NaN if you don't need.
 
@@ -104,11 +104,11 @@ Attention: Before you begin to use this package, you need to make sure that you 
 
 When opening the config file in text format, there are some lines that need to be filled in, they are:
 
- - transcript_fasta: Fill in the absolute path of the species transcript genome related to circRNA(not the relative path!).
+ - transcript_fasta: Fill in the absolute path of the transcript sequences related to circRNA(not the relative path!).
 
  - raw_reads: Fill in the absolute path of the Ribo-Seq data(One or two tissue samples data in the same species) related to your interest species(not the relative path!).
    
- - ribosome_fasta: Fill in the absolute path of the rRNA data related to your interset species(not the relative path!).
+ - ribosome_fasta: Fill in the absolute path of the rRNA data related to your interest species(not the relative path!).
    
  - circrnas: Fill in the absolute path of the candidate circRNA(not the relative path!).You need to ensure that the id format of your circRNA is the same as the circrna_gtf file.
    
