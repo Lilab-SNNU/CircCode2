@@ -33,20 +33,20 @@ TC-hsa-UBE2J2_0010      -      607      ENSG00000160087.20      NaN
 
 ## python3 package:
 
-- Biopython
-- Pandas
-- numpy
-- yaml
-- argparse
+- Biopython (v 1.78)
+- Pandas (v 1.3.5)
+- numpy (v 1.19.4)
+- yaml (v 5.3.1)
+- argparse 
 - time
 - os
 - math
 - PIL
 - itertools
-- torch
-- sklearn
-- tqdm
-- matplotlib
+- torch (v 1.10.1)
+- sklearn (v 0.24.0)
+- tqdm (v 4.51.0)
+- matplotlib (v 3.3.3)
 
 ## R package:
 
@@ -84,7 +84,7 @@ Attention: Before you begin to use this package, you need to make sure that you 
   - Filter and obtain the mapped reads and circRNA
 
   ```
-   python3 filter_coding_reads_circ.py -y config.yaml
+   python3 filter_coding_circ_reads.py -y config.yaml
   ```
   
   - Identify the ORF from mapped circRNAs by some features
