@@ -57,7 +57,7 @@ TC-hsa-UBE2J2_0010      -      607      ENSG00000160087.20      NaN
 # Quick Start
 Usually you can download the package from github simply,and then:
 ```
-git clone git://github.com/Lilab-SNNU/CircCode2.git
+git clone https://github.com/Lilab-SNNU/CircCode2.git
 cd CircCode2
 tar -zxvf requiredSoft.tar.gz
 tar -zxvf test_data.tar.gz
