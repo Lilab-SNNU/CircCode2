@@ -78,25 +78,25 @@ Attention: Before you begin to use this package, you need to make sure that you 
   - Deal raw ribo-seq data
 
   ```
-   python deal_raw_reads.py -y config.yaml
+   python3 deal_raw_reads.py -y config.yaml
   ```
   
   - Filter and obtain the mapped reads and circRNA
 
   ```
-   python filter_coding_reads_circ.py -y config.yaml
+   python3 filter_coding_reads_circ.py -y config.yaml
   ```
   
   - Identify the ORF from mapped circRNAs by some features
 
   ```
-  python filter_coding_orf.py -y config.yaml
+  python3 filter_coding_orf.py -y config.yaml
   ```
   
   - Visualize the IRES region secondary structure, the circ annoated graph, the word annoated graph, the express_analysis of the circ and the distribution of the predicted ORFs
   
   ```
-  python visual_circ_orf.py -y config.yaml
+  python3 visual_circ_orf.py -y config.yaml
   ```
 
 
